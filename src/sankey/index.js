@@ -92,7 +92,11 @@ function Sankey(props) {
   const path = sankeyLinkHorizontal();
 
   return (
-    <XYPlot {...props} yType="literal" className={getCombinedClassName("rv-sankey", className)}>
+    <XYPlot
+      {...props}
+      yType="literal"
+      className={getCombinedClassName('rv-sankey', className)}
+    >
       {linksCopy.map((link, i) => (
         <SankeyLink
           style={style.links}
@@ -110,9 +114,10 @@ function Sankey(props) {
       ))}
       <VerticalRectSeries
         animation={animation}
-        className={getCombinedClassName(className, "rv-sankey__node")}
+        className={getCombinedClassName(className, 'rv-sankey__node')}
         data={nodesCopy.map(node => ({
           ...node,
+          id: node.nodeId,
           y: node.y1 - marginTop,
           y0: node.y0 - marginTop,
           x: node.x1,

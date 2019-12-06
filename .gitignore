@@ -2,8 +2,7 @@ node_modules/
 .sass-cache/
 .nyc_output/
 coverage/
-dist/
-es/
+
 
 npm-debug.log*
 yarn-error.log*
